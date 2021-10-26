@@ -8,12 +8,9 @@ import {LoadingUserComponent} from './components/loading-user/loading-user.compo
 
 
 const routes: Routes = [
-  { path: 'en', redirectTo: 'en/dashboard', pathMatch: 'full' },
-  { path: 'fr', redirectTo: 'fr/dashboard', pathMatch: 'full' },
-  { path: '', redirectTo: 'connect/coucou', pathMatch: 'full' },
   { path: ':lg/dashboard', component: MenubarComponent },
   { path: ':lg/settings', component: SettingsComponent },
-  { path: 'connect/:id', component: LoadingUserComponent },
+  { path: ':lg/connect/:id', component: LoadingUserComponent },
 ];
 
 @NgModule({

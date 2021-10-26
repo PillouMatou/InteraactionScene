@@ -24,7 +24,12 @@ export class LoadingUserComponent implements OnInit {
     this.username = String(this.routes.snapshot.paramMap.get('id'));
     this.userDBService.currentUser = this.username;
     this.scenesService.loadUserOfUsersList(this.username);
-    setTimeout(() => this.route.navigate(['fr']),500);
+    if(String(this.routes.snapshot.paramMap.get('lg')) === 'fr'){
+      setTimeout(() => this.route.navigate(['fr/dashboard']),100);
+    }
+    else{
+      setTimeout(() => this.route.navigate(['en/dashboard']),100);
+    }
   }
 
 }
