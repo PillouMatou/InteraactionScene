@@ -4,12 +4,16 @@ import { MenubarComponent } from './components/menubar/menubar.component'
 import {BrowserModule} from "@angular/platform-browser";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SettingsComponent} from "./components/settings/settings.component";
+import {LoadingUserComponent} from './components/loading-user/loading-user.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: MenubarComponent },
-  { path: 'settings', component: SettingsComponent }
+  { path: 'en', redirectTo: 'en/dashboard', pathMatch: 'full' },
+  { path: 'fr', redirectTo: 'fr/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'connect/coucou', pathMatch: 'full' },
+  { path: ':lg/dashboard', component: MenubarComponent },
+  { path: ':lg/settings', component: SettingsComponent },
+  { path: 'connect/:id', component: LoadingUserComponent },
 ];
 
 @NgModule({
