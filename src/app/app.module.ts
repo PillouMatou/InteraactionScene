@@ -32,6 +32,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LogoutAppComponent } from './components/logoutApp/logout-app.component';
 import { LoadingUserComponent } from './components/loading-user/loading-user.component';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
