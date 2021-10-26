@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SettingsService} from '../../services/settings.service';
 import {LanguageService} from '../../services/language.service';
 import {Router} from "@angular/router";
+import {ScenesService} from "../../services/scenes.service";
 
 @Component({
   selector: 'app-settings',
@@ -11,6 +12,7 @@ import {Router} from "@angular/router";
 export class SettingsComponent implements OnInit {
 
   constructor(public settingsService: SettingsService,
+              public scenesService: ScenesService,
               public languageService: LanguageService,
               public router: Router) { }
 
@@ -27,5 +29,9 @@ export class SettingsComponent implements OnInit {
 
   getAFSRLogoPNGUrl(s): string {
     return 'url(assets/images/'+ s +'.png)';
+  }
+
+  saveConfig() {
+    setTimeout(() => this.scenesService.updateConfig(),50);
   }
 }
