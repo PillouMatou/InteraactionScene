@@ -13,7 +13,7 @@
       {{'Dashboard.Settings' | translate}}
     </div>
 
-    <a class="topBarAFSRLogo floatRight" href="https://afsr.fr/">
+    <a class="topBarAFSRLogo floatRight" (click)="openDialogASFR()">
       <div class="imageAFSR" style="width: 100%"
            [ngStyle]="{'background-image':this.getAFSRLogoPNGUrl('Logo-AFSR')}">
       </div>
@@ -33,8 +33,7 @@
     </div>
     <div class="settings-item">
       <label for="dwellTime">{{'Settings.DwellTime' | translate}}:</label>
-      <input [(ngModel)]="this.settingsService.DWELL_TIME_TIMEOUT_VALUE" (change)="saveConfig()" id="dwellTime" type="text" maxlength="5"
-      >
+      <input [(ngModel)]="this.settingsService.DWELL_TIME_TIMEOUT_VALUE" (change)="saveConfig()" id="dwellTime" type="text" maxlength="5">
     </div>
   </div>
 </div>

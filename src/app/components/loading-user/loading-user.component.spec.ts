@@ -10,7 +10,7 @@ describe('LoadingUserComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoadingUserComponent ],
+      declarations: [ LoadingUserComponent, RouterTestingModule ],
       imports: [RouterTestingModule, TranslateModule.forRoot()]
     })
     .compileComponents();

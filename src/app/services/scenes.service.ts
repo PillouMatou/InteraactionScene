@@ -348,6 +348,10 @@ export class ScenesService {
       const db = event.target.result;
       const gridRequest = db.transaction(['UserList']).objectStore('UserList').get(1);
       gridRequest.onsuccess = e => {
+        const loggedUser = localStorage.getItem('logged');
+        if (loggedUser != null) {
+          this.userDBService.currentUser = loggedUser;
+        }
         this.userDBService.usersList = gridRequest.result;
         this.loadInfoFromCurrentUser();
       };
