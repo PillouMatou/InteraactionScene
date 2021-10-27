@@ -31,6 +31,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LogoutAppComponent } from './components/logoutApp/logout-app.component';
+import { DisplaySiteASFRComponent } from './components/display-site-asfr/display-site-asfr.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
@@ -54,6 +55,7 @@ export function createTranslateLoader(http: HttpClient) {
     DwellCursorComponent,
     SettingsComponent,
     LogoutAppComponent,
+    DisplaySiteASFRComponent,
   ],
     imports: [
       TranslateModule.forRoot({
