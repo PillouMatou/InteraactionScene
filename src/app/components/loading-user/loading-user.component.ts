@@ -23,6 +23,7 @@ export class LoadingUserComponent implements OnInit {
     //this.username = location.href.substring(32);
     this.username = String(this.routes.snapshot.paramMap.get('id'));
     this.userDBService.currentUser = this.username;
+    localStorage.setItem('logged', this.userDBService.currentUser);
     this.scenesService.loadUserOfUsersList(this.username);
     if(String(this.routes.snapshot.paramMap.get('lg')) === 'fr'){
       setTimeout(() => this.route.navigate(['fr/dashboard']),100);
