@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {SettingsService} from '../../services/settings.service';
 import {LanguageService} from '../../services/language.service';
 import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
+import {AddSceneDialogComponent} from "../add-scene-dialog/add-scene-dialog.component";
+import {DisplaySiteASFRComponent} from "../display-site-asfr/display-site-asfr.component";
 import { ScenesService } from 'src/app/services/scenes.service';
 
 @Component({
@@ -13,6 +16,7 @@ export class SettingsComponent implements OnInit {
 
   constructor(public settingsService: SettingsService,
               public languageService: LanguageService,
+              private dialog: MatDialog,
               public router: Router,
               public scenesService: ScenesService) { }
 
@@ -30,5 +34,12 @@ export class SettingsComponent implements OnInit {
 
   getAFSRLogoPNGUrl(s): string {
     return 'url(assets/images/'+ s +'.png)';
+  }
+
+  openDialogASFR() {
+    this.dialog.open(DisplaySiteASFRComponent,{
+      height: '90%',
+      width: '90%'
+    });
   }
 }

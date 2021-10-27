@@ -33,6 +33,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DefaultStandardSceneComponent } from './components/default-standard-scene/default-standard-scene.component';
 import { DialogTutorialComponent } from './components/dialog-tutorial/dialog-tutorial.component';
 import { LogoutAppComponent } from './components/logoutApp/logout-app.component';
+import { DisplaySiteASFRComponent } from './components/display-site-asfr/display-site-asfr.component';
 import { LoadingUserComponent } from './components/loading-user/loading-user.component';
 
 export function createTranslateLoader(http: HttpClient) {
@@ -60,6 +61,7 @@ export function createTranslateLoader(http: HttpClient) {
     DefaultStandardSceneComponent,
     DialogTutorialComponent,
     LogoutAppComponent,
+    DisplaySiteASFRComponent,
     LoadingUserComponent,
   ],
     imports: [
