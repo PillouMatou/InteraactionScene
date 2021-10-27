@@ -27,11 +27,15 @@ import { HotspotDeleteDialogComponent } from './components/hotspot-delete-dialog
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { DwellCursorComponent } from './components/dwell-cursor/dwell-cursor.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DefaultStandardSceneComponent } from './components/default-standard-scene/default-standard-scene.component';
+import { DialogTutorialComponent } from './components/dialog-tutorial/dialog-tutorial.component';
 import { LogoutAppComponent } from './components/logoutApp/logout-app.component';
 import { DisplaySiteASFRComponent } from './components/display-site-asfr/display-site-asfr.component';
+import { LoadingUserComponent } from './components/loading-user/loading-user.component';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
@@ -54,8 +58,11 @@ export function createTranslateLoader(http: HttpClient) {
     HotspotDeleteDialogComponent,
     DwellCursorComponent,
     SettingsComponent,
+    DefaultStandardSceneComponent,
+    DialogTutorialComponent,
     LogoutAppComponent,
     DisplaySiteASFRComponent,
+    LoadingUserComponent,
   ],
     imports: [
       TranslateModule.forRoot({
@@ -78,7 +85,7 @@ export function createTranslateLoader(http: HttpClient) {
         MatButtonModule,
         MatSelectModule,
         MatButtonToggleModule,
-        HttpClientModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent],

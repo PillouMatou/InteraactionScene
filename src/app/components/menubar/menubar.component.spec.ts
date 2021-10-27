@@ -3,6 +3,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {MenubarComponent} from './menubar.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {MatDialogModule} from "@angular/material/dialog";
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('MenubarComponent', () => {
   let component: MenubarComponent;
@@ -10,7 +11,7 @@ describe('MenubarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [TranslateModule.forRoot(), MatDialogModule],
+      imports: [TranslateModule.forRoot(), MatDialogModule, RouterTestingModule],
       declarations: [MenubarComponent]
     })
       .compileComponents();
